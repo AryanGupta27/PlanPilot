@@ -56,8 +56,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 400px;
+  width: auto;
+  max-width:max-content;
   margin: 10px 0;
   padding: 10px;
   border: 1px solid #ccc;

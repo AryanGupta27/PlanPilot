@@ -2,7 +2,10 @@ import "./App.css";
 import { useState } from "react";
 import { Task } from "./Task";
 function App() {
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(()=>{
+    const storedTodoList = localStorage.getItem("todoList");
+    return storedTodoList ? JSON.parse(storedTodoList) : [];
+  },[]);
   const [newTask, setNewTask] = useState("");
 
   const handleChange = (event) => {
@@ -17,7 +20,13 @@ function App() {
       completeStatus: false,
     };
 
-    setTodoList([...todoList, task]);
+    const updatedTodoList = [...todoList, task];
+    setTodoList(updatedTodoList);
+
+    setNewTask('');
+
+    // Save updated todoList to localStorage
+    localStorage.setItem("todoList", JSON.stringify(updatedTodoList));
   };
 
   const deleteTask = (id) => {
@@ -30,7 +39,7 @@ function App() {
     });
 
     setTodoList(newToDoList);
-
+    localStorage.setItem("todoList", JSON.stringify(newToDoList));
     /*  orsimply 
       return(
         task.id !== taskName.id 
@@ -47,13 +56,20 @@ function App() {
       }
     });
     setTodoList(newUpdatedList);
+    localStorage.setItem("todoList", JSON.stringify(newUpdatedList));
+    
   };
+  function checkIfEnterPressed(event){
+        if(event.keyCode===13){ // 13 is the keyCode for enter key
+            addTask();
+        }
+    }
 
   return (
     <div className="App">
       <h1 className="heading">Get Things Done !</h1>
       <div className="addTask">
-        <input onChange={handleChange} />
+        <input onChange={handleChange} onKeyDown={checkIfEnterPressed} value={newTask} />
         <button onClick={addTask}>Add Task</button>
       </div>
       <div className="listOfTask">
