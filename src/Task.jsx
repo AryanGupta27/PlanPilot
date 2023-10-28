@@ -7,7 +7,7 @@ export const Task = (props) => {
       className={`task ${props.completeStatus ? "completed" : ""}`}
       //   style={{ backgroundColor: props.completeStatus ? "green" : "white" }}
     >
-      <h1>{props.taskName}</h1>
+      <h1 className="taskheading">{props.taskName}</h1>
       <button
         className="delete-button"
         onClick={() => {

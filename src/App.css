@@ -4,6 +4,9 @@
   margin-bottom: 1.5rem;
   font-size: 4vmax;
 }
+.taskheading{
+  font-size: 3vmax;
+}
 /* Style the entire app container */
 .App {
   /* text-align: center; */
@@ -42,6 +45,13 @@
   background-color: #45a049;
 }
 
+.alltasks{
+  /* border: 2px solid red; */
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 /* Style the list of tasks */
 .listOfTask {
   display: flex;
@@ -50,6 +60,8 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
+  padding: 10px;
+  /* border: 5px solid black; */
 }
 
 /* Style the task item */
@@ -57,6 +69,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap:wrap;
   width: auto;
   max-width:max-content;
   margin: 10px 0;
@@ -108,3 +121,22 @@
   background-color: #45a049;
 }
 
+@media (max-width:600px) {
+  .heading{
+   text-align: center;
+  }
+  .alltasks{
+    align-items: center;
+    justify-content: center;
+  }
+  .listOfTask{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .task{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
