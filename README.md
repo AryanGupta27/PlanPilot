@@ -7,6 +7,17 @@
 
 Welcome to the Plan Pilot ( ToDo Application) Project! This is a simple web application built with React.js, HTML, and CSS to help you manage your tasks efficiently. Whether you're organizing your work or personal life, this application provides a user-friendly interface to create, manage, and complete tasks.
 
+## Demo
+
+You can check out the live demo of Wonder Cart deployed via Vercel: [Plan Pilot Demo](https://planpilot.vercel.app/)
+
+## Technologies
+
+- [React.js](https://reactjs.org/): A JavaScript library for building user interfaces.
+- HTML: HyperText Markup Language for structuring the web application.
+- CSS: Cascading Style Sheets for styling the application.
+
+  
 ## Features
 
 - Create new tasks with descriptions.
@@ -15,11 +26,7 @@ Welcome to the Plan Pilot ( ToDo Application) Project! This is a simple web appl
 - Responsive design for various devices.
 - Intuitive and easy-to-use interface.
 
-## Technologies
 
-- [React.js](https://reactjs.org/): A JavaScript library for building user interfaces.
-- HTML: HyperText Markup Language for structuring the web application.
-- CSS: Cascading Style Sheets for styling the application.
 
 ## Getting Started
 
